@@ -1,0 +1,86 @@
+Maksym@DESKTOP-E5MGHTU /cygdrive/c
+$ cd java/mongo001/src/
+
+Maksym@DESKTOP-E5MGHTU /cygdrive/c/java/mongo001/src
+$ javac -cp "gson-2.8.2.jar;json-simple-1.1.jar;mongo-java-driver-3.9.1.jar;." Main.java && java -cp "gson-2.8.2.jar;json-simple-1.1.jar;mongo-java-driver-3.9.1.jar;." Main
+
+Jan 31, 2019 1:39:59 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+
+ACTIVE DATABASE: 'lab3'...
+
+===================== Databases =====================
+  * admin
+  * animalsdb
+  * citydb
+  * config
+  * importdb
+  * local
+  * temp
+  * test
+  * test001
+  * testdb
+
+===================== Collections =====================
+  empty...
+
+<<< Collection 'restaurants' was successfully created >>>
+<<< All data from 'restaurants.json' was successfully imported to collection 'restaurants' >>>
+
+===================== Collections =====================
+  * restaurants
+
+All documents:
+{ "_id" : "ObjectId('5c39f9b5df831369c19b6bca')", "name" : "Sun Bakery Trattoria", "stars" : 4, "categories" : ["Pizza", "Pasta", "Italian", "Coffee", "Sandwiches"] }
+{ "_id" : "ObjectId('5c39f9b5df831369c19b6bcb')", "name" : "Blue Bagels Grill", "stars" : 3, "categories" : ["Bagels", "Cookies", "Sandwiches"] }
+{ "_id" : "ObjectId('5c39f9b5df831369c19b6bcc')", "name" : "Hot Bakery Cafe", "stars" : 4, "categories" : ["Bakery", "Cafe", "Coffee", "Dessert"] }
+{ "_id" : "ObjectId('5c39f9b5df831369c19b6bcd')", "name" : "XYZ Coffee Bar", "stars" : 5, "categories" : ["Coffee", "Cafe", "Bakery", "Chocolates"] }
+{ "_id" : "ObjectId('5c39f9b5df831369c19b6bce')", "name" : "456 Cookies Shop", "stars" : 4, "categories" : ["Bakery", "Cookies", "Cake", "Coffee"] }
+
+<<< Collection 'restaurants' was successfully deleted >>>
+
+===================== Collections =====================
+  empty...
+
+<<< Collection 'restaurants' was successfully created >>>
+<<< All data from 'restaurants.json' was successfully imported to collection 'restaurants' >>>
+
+===================== Collections =====================
+  * restaurants
+
+All documents:
+{ "_id" : "ObjectId('5c39f9b5df831369c19b6bca')", "name" : "Sun Bakery Trattoria", "stars" : 4, "categories" : ["Pizza", "Pasta", "Italian", "Coffee", "Sandwiches"] }
+{ "_id" : "ObjectId('5c39f9b5df831369c19b6bcb')", "name" : "Blue Bagels Grill", "stars" : 3, "categories" : ["Bagels", "Cookies", "Sandwiches"] }
+{ "_id" : "ObjectId('5c39f9b5df831369c19b6bcc')", "name" : "Hot Bakery Cafe", "stars" : 4, "categories" : ["Bakery", "Cafe", "Coffee", "Dessert"] }
+{ "_id" : "ObjectId('5c39f9b5df831369c19b6bcd')", "name" : "XYZ Coffee Bar", "stars" : 5, "categories" : ["Coffee", "Cafe", "Bakery", "Chocolates"] }
+{ "_id" : "ObjectId('5c39f9b5df831369c19b6bce')", "name" : "456 Cookies Shop", "stars" : 4, "categories" : ["Bakery", "Cookies", "Cake", "Coffee"] }
+
+All Cafe:
+  * Hot Bakery Cafe
+  * XYZ Coffee Bar
+
+<<< Stars for 'XYZ Coffe Bar' was incremented successfully >>>
+
+All documents:
+{ "_id" : "ObjectId('5c39f9b5df831369c19b6bca')", "name" : "Sun Bakery Trattoria", "stars" : 4, "categories" : ["Pizza", "Pasta", "Italian", "Coffee", "Sandwiches"] }
+{ "_id" : "ObjectId('5c39f9b5df831369c19b6bcb')", "name" : "Blue Bagels Grill", "stars" : 3, "categories" : ["Bagels", "Cookies", "Sandwiches"] }
+{ "_id" : "ObjectId('5c39f9b5df831369c19b6bcc')", "name" : "Hot Bakery Cafe", "stars" : 4, "categories" : ["Bakery", "Cafe", "Coffee", "Dessert"] }
+{ "_id" : "ObjectId('5c39f9b5df831369c19b6bcd')", "name" : "XYZ Coffee Bar", "stars" : 6, "categories" : ["Coffee", "Cafe", "Bakery", "Chocolates"] }
+{ "_id" : "ObjectId('5c39f9b5df831369c19b6bce')", "name" : "456 Cookies Shop", "stars" : 4, "categories" : ["Bakery", "Cookies", "Cake", "Coffee"] }
+
+<<< Restaurant '456 Cookies Shop' was renamed to '123 Cookies Heaven' successfully >>>
+
+All documents:
+{ "_id" : "ObjectId('5c39f9b5df831369c19b6bca')", "name" : "Sun Bakery Trattoria", "stars" : 4, "categories" : ["Pizza", "Pasta", "Italian", "Coffee", "Sandwiches"] }
+{ "_id" : "ObjectId('5c39f9b5df831369c19b6bcb')", "name" : "Blue Bagels Grill", "stars" : 3, "categories" : ["Bagels", "Cookies", "Sandwiches"] }
+{ "_id" : "ObjectId('5c39f9b5df831369c19b6bcc')", "name" : "Hot Bakery Cafe", "stars" : 4, "categories" : ["Bakery", "Cafe", "Coffee", "Dessert"] }
+{ "_id" : "ObjectId('5c39f9b5df831369c19b6bcd')", "name" : "XYZ Coffee Bar", "stars" : 6, "categories" : ["Coffee", "Cafe", "Bakery", "Chocolates"] }
+{ "_id" : "ObjectId('5c39f9b5df831369c19b6bce')", "name" : "123 Cookies Heaven", "stars" : 4, "categories" : ["Bakery", "Cookies", "Cake", "Coffee"] }
+
+Aggregation (4 or more stars):
+  * 123 Cookies Heaven: 4(****)
+  * Hot Bakery Cafe: 4(****)
+  * Sun Bakery Trattoria: 4(****)
+  * XYZ Coffee Bar: 6(******)
+
+<<< Collection 'restaurants' was successfully deleted >>>
